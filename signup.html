@@ -498,69 +498,12 @@ Click the button below to officially register and complete payment.
 
 </div>
 
-<div class="form-box">
-
-<h2 class="section-title2">
-
-Step 2: Participant Information Form
-
-</h2>
-
-<form id="signupForm">
-
-  <input type="text" name="name" placeholder="Full Name" required>
-
-  <input type="email" name="email" placeholder="Email" required>
-
-  <input type="number" name="age" placeholder="Age" required>
-
-  <select name="gender" required>
-    <option value="">Gender</option>
-    <option value="Male">Male</option>
-    <option value="Female">Female</option>
-    <option value="Other">Other</option>
-  </select>
-
-    <br>
-    <br>
-    
-  <select name="shirt" required>
-    <option value="">Race Hat Color</option>
-    <option value="Blue">Blue</option>
-    <option value="White">White</option>
-    <option value="Gray">Gray</option>
-  </select>
-
-  <button type="submit">Submit</button>
-
-</form>
-
-<script>
-document.getElementById("signupForm").addEventListener("submit", async function(e) {
-  e.preventDefault();
-
-  const formData = new URLSearchParams();
-  formData.append("name", this.name.value);
-  formData.append("email", this.email.value);
-  formData.append("age", this.age.value);
-  formData.append("gender", this.gender.value);
-  formData.append("shirt", this.shirt.value);
-
-  await fetch("https://script.google.com/macros/s/AKfycbxyZ3re_ItkQuXwYA76u4FcpOPsFeobQUqDGRQR-NcSMttfgqYeXdVUPAWxV7QN4wroNQ/exec", {
-    method: "POST",
-    body: formData
-  });
-
-  alert("You're officially registered!");
-  this.reset();
-});
-</script>
-
-</div>
+<br>
+<br>
 
 <div class="step">
 
-<h2 class="section-title2">Step 3: Fill out Waiver the Day of Race </h2>
+<h2 class="section-title2">Step 2: Fill out Waiver the Day of Race </h2>
 
 <h3>What is Stated on the Waiver</h3>
 
